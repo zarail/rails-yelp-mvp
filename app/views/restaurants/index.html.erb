@@ -1,0 +1,13 @@
+<%# http://localhost:3000/restaurants %>
+
+<h1><strong>List of All Restaurants</strong></h1>
+
+<h3>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= restaurant.name%></li>
+    <% end %>
+  </ul>
+</h3>
+
+<h4><%= link_to "Add Restaurant", new_restaurant_path %></h4>

@@ -1,0 +1,15 @@
+<%# http://localhost:3000/new %>
+
+<h1><strong>Add a New Restaurant</strong></h1>
+
+<h3>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+    <%= f.submit %>
+  <% end %>
+</h3>
+
+<h4><%= link_to "Back to Restaurants List", restaurants_path %></h4>
